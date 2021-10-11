@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "449363186816",
+    "project_id": "reciclagemapp-acb4e",
+    "storage_bucket": "reciclagemapp-acb4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449363186816:android:a54348aefc86ba8b9b0265",
+        "android_client_info": {
+          "package_name": "com.example.reciclandoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449363186816-pbhd816b54gl7lcfen24g5sc58571fdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reciclandoapp",
+            "certificate_hash": "4b4df84c4c179e3e8b7d29a2d4eb852398101d2d"
+          }
+        },
+        {
+          "client_id": "449363186816-9ll56v4fu58vvvhfrn429sfl5kpftf9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDelrmGq0r_Ye55bFa7cT2NejloLo0pCMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449363186816-9ll56v4fu58vvvhfrn429sfl5kpftf9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
