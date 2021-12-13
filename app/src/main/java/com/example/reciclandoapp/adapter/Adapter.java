@@ -67,4 +67,6 @@ public class Adapter extends FirebaseRecyclerAdapter<Ideia, Adapter.IdeiaViewHol
             imgIdeia = itemView.findViewById(R.id.imgIdeia);
         }
     }
+
+
 }

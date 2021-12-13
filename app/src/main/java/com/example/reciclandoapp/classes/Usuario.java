@@ -2,8 +2,8 @@ package com.example.reciclandoapp.classes;
 
 public class Usuario {
 
-    private String nome, email, dataNascimento, endereco, telefone;
-    private int cpf;
+    private String nome, email, dataNascimento, cpf, endereco, telefone;
+    private int  tipoUsuario;
 
     public Usuario() {
     }
@@ -48,11 +48,19 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public int getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(int tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }

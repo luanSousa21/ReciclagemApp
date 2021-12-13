@@ -76,15 +76,6 @@ public class CadastroIdeiaActivity extends AppCompatActivity {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 123) {
                 Uri imagemSelecionada = data.getData();
-                Log.i("testando 1", imagemSelecionada.toString());
-//                String[] colunas = {MediaStore.Images.Media.DATA};
-//
-//                Cursor cursor = getContentResolver().query(imagemSelecionada, colunas, null, null, null);
-//                cursor.moveToFirst();
-//
-//                int indexColuna = cursor.getColumnIndex(colunas[0]);
-//                String pathImg = cursor.getString(indexColuna); //caminho da imagem
-//                cursor.close();
                 try {
                     ParcelFileDescriptor pfd = this.getContentResolver().openFileDescriptor(imagemSelecionada, "r");
                     Bitmap bitmap = BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor());
@@ -94,12 +85,6 @@ public class CadastroIdeiaActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-//                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-//                Log.i("testando 2", bitmap.toString());
-//                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//                bitmap.compress(Bitmap.CompressFormat.JPEG, 75, baos);
-//                imagem.setImageBitmap(bitmap);
-//                imagem.setVisibility(View.VISIBLE);
 
             }
         }
@@ -153,10 +138,6 @@ public class CadastroIdeiaActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
 
     }
 }

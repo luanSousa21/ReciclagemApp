@@ -8,29 +8,29 @@
     tools:context=".InicioActivity">
 
     <Button
-        android:id="@+id/btnLoginWhitEmail"
+        android:id="@+id/btnCadastrarCliente"
         android:layout_width="260dp"
         android:layout_height="60dp"
         android:layout_marginTop="276dp"
-        android:text="ENTRAR COM EMAIL"
-        android:textColor="@color/black"
         android:background="@drawable/rounded_button"
+        android:text="Sou Cliente"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnCadastrarColetor"
         android:layout_width="260dp"
         android:layout_height="60dp"
-        android:text="CADASTRE-SE"
-        android:textColor="@color/black"
         android:background="@drawable/rounded_button"
+        android:text="Sou Coletor"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLoginWhitEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarCliente"
         app:layout_constraintVertical_bias="0.192" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

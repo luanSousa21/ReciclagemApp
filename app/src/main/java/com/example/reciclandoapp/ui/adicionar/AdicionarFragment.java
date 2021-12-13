@@ -1,5 +1,6 @@
 package com.example.reciclandoapp.ui.adicionar;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,7 +17,7 @@ import com.example.reciclandoapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AdicionarFragment#newInstance} factory method to
+ * Use the {@link AdicionarFragment} factory method to
  * create an instance of this fragment.
  */
 public class AdicionarFragment extends Fragment {

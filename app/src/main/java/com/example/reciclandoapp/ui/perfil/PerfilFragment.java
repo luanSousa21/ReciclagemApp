@@ -2,7 +2,9 @@ package com.example.reciclandoapp.ui.perfil;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -33,9 +35,9 @@ public class PerfilFragment extends Fragment {
     private Button btnSairApp;
     private FirebaseAuth usuario = FirebaseAuth.getInstance();
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
-   // private PerfilViewModel mViewModel;
     private TextView txtNome, txtEmail;
     private Query pesquisaUsuario;
+    SharedPreferences preferences;
 
     public static PerfilFragment newInstance() {
         return new PerfilFragment();
@@ -47,31 +49,9 @@ public class PerfilFragment extends Fragment {
         View view =  inflater.inflate(R.layout.perfil_fragment, container, false);
         txtNome = view.findViewById(R.id.txtPerfilNome);
         txtEmail = view.findViewById(R.id.txtPerfilEmail);
-        DatabaseReference listaUsuarios = referencia.child("Usuario");
-        pesquisaUsuario = listaUsuarios.orderByChild("email").equalTo(usuario.getCurrentUser().getEmail());
-
-        pesquisaUsuario.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                for (DataSnapshot dt : snapshot.getChildren())
-                {
-                    Usuario user = dt.getValue(Usuario.class);
-                    txtNome.setText(user.getNome());
-                    txtEmail.setText(user.getEmail());
-                }
-
-//                Usuario user = snapshot.getValue(Usuario.class);
-//                Log.i("Usuario", snapshot.getValue().toString());
-                //
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
+        preferences = getActivity().getSharedPreferences("user_preferences", Context.MODE_PRIVATE);
+        txtNome.setText(preferences.getString("nomeUsuario", " "));
+        txtEmail.setText(preferences.getString("email", " "));
         btnSairApp = view.findViewById(R.id.btnSairApp);
         btnSairApp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,11 +66,5 @@ public class PerfilFragment extends Fragment {
         return  view;
     }
 
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(PerfilViewModel.class);
-//        // TODO: Use the ViewModel
-//    }
 
 }

@@ -8,17 +8,25 @@ import android.view.View;
 import android.widget.Button;
 
 public class InicioActivity extends AppCompatActivity {
-    Button btnLoginWhitEmail;
+    Button btnCadCli, btnCadCol;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        btnLoginWhitEmail = findViewById(R.id.btnLoginWhitEmail);
-        btnLoginWhitEmail.setOnClickListener(new View.OnClickListener() {
+        btnCadCli = findViewById(R.id.btnCadastrarCliente);
+        btnCadCol = findViewById(R.id.btnCadastrarColetor);
+        btnCadCli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =  new Intent(InicioActivity.this, LoginWhitEmailActivity.class);
+                Intent i =  new Intent(InicioActivity.this, CadastroUsuarioActivity.class);
+                startActivity(i);
+            }
+        });
+        btnCadCol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =  new Intent(InicioActivity.this, CadastroColetor.class);
                 startActivity(i);
             }
         });

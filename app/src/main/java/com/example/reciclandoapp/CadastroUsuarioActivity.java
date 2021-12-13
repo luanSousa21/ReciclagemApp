@@ -30,7 +30,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_usuario);
         ActionBar ab = getSupportActionBar();
-        ab.setTitle("Cadastro");
+        ab.setTitle("Cadastro de usuário");
 
 
         nome = findViewById(R.id.txtNome);
@@ -57,10 +57,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         Usuario user = new Usuario();
         user.setNome(nome.getText().toString());
         user.setEndereco(endereco.getText().toString());
-        user.setCpf(Integer.parseInt(cpf.getText().toString()));
+        user.setCpf(cpf.getText().toString());
         user.setTelefone(telefone.getText().toString());
         user.setDataNascimento(dtNasc.getText().toString());
         user.setEmail(email.getText().toString());
+        user.setTipoUsuario(1);
         DatabaseReference usuario = referencia.child("Usuario");
         usuario.push().setValue(user);
 
